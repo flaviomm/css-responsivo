@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #00121a;
+    color: #fff;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #133232;
+}
+
+h1 {
+    color: #fff;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+
+main .about {
+    background-color: #285558;
+}
+
+#about {
+    display: flex;
+    gap: 20px;
+}
+
+.main-about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .products {
+    background-color: #3f7887;
+}
+
+#products {
+    display: flex;
+    flex-direction: column;
+}
+
+.items {
+    display: flex;
+    gap: 20px;
+}
+
+.item {
+    background-color: #285558;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.item img {
+    width: 100%;
+    height: 50%;
+}
+
+.item h3 {
+    text-align: center;
+}
+
+.item span {
+    font-weight: bold;
+}
+
+.item button {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.item button:hover {
+    background-color: #3f7887;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+footer .container {
+    text-align: center;
+    background-color: #133232;
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 100%;
+    }
+
+    header .container {
+        display: block;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    header ul {
+        justify-content: center;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    .items {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+    .container {
+        max-width: 100%;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    /* .items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    } */
+
+    .items {
+        flex-wrap: wrap;
+    }
+
+    .item {
+        width: calc(50% - 10px);
+    }
+}
